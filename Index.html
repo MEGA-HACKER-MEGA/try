@@ -1,0 +1,19 @@
+
+<html lang="en">
+  <head>
+    <script>
+    class NSTouchBar : NSObject
+override func makeTouchBar() -> NSTouchBar? {
+    let mainBar = NSTouchBar()
+    mainBar.delegate = self    mainBar.customizationIdentifier = .imageViewer
+    mainBar.defaultItemIdentifiers = [.sharingPicker, .strokePopover, .strokeColorPicker, .photoPicker, .flexibleSpace, .clearButton, .otherItemsProxy]
+    mainBar.customizationAllowedItemIdentifiers = [.strokeSlider, .strokePopover, .photoPicker, .strokeColorPicker, .clearButton, .sharingPicker, .flexibleSpace]
+    mainBar.principalItemIdentifier = .photoPicker
+    return mainBar
+}
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
